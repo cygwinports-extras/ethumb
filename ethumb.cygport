@@ -1,0 +1,27 @@
+NAME="ethumb"
+VERSION=1.7.0
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Enlightenment thumbnail generation library"
+HOMEPAGE="http://www.enlightenment.org/"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
+PATCH_URI="01-no-undefined.patch"
+
+PKG_NAMES="ethumb ethumbd libethumb1 libethumb-devel"
+ethumb_CONTENTS="--exclude=ethumbd.exe usr/bin/*.exe usr/share/doc/"
+ethumbd_CONTENTS="usr/bin/ethumbd.exe usr/lib/ethumb/ethumbd* usr/share/dbus-1/"
+libethumb1_REQUIRES="ethumbd"
+libethumb1_CONTENTS="usr/bin/*-1.dll usr/lib/ethumb/plugins/ usr/share/ethumb/"
+libethumb_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
+DISTCLEANFILES="doc/Doxyfile"
+
+DEPEND="pkgconfig(ecore)
+	pkgconfig(edje)
+	pkgconfig(eet)
+	pkgconfig(eina)
+	pkgconfig(evas)"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/ethumb"
+
+KEEP_LA_FILES="none"

@@ -1,0 +1,20 @@
+--- origsrc/ethumb-1.7.0/src/plugins/emotion/Makefile.am	2012-04-23 09:01:23.000000000 -0500
++++ src/ethumb-1.7.0/src/plugins/emotion/Makefile.am	2012-09-10 02:09:43.859070300 -0500
+@@ -36,7 +36,7 @@ $(top_builddir)/src/lib/libethumb.la \
+ @ECORE_FILE_LIBS@ \
+ @EVAS_LIBS@ \
+ @EINA_LIBS@
+-emotion_la_LDFLAGS = -module -avoid-version
++emotion_la_LDFLAGS = -module -avoid-version -no-undefined
+ emotion_la_LIBTOOLFLAGS = --tag=disable-static
+ 
+ 
+--- origsrc/ethumb-1.7.0/src/plugins/epdf/Makefile.am	2012-04-23 09:01:23.000000000 -0500
++++ src/ethumb-1.7.0/src/plugins/epdf/Makefile.am	2012-09-10 02:09:54.904702000 -0500
+@@ -17,5 +17,5 @@ $(top_builddir)/src/lib/libethumb.la \
+ @EPDF_LIBS@ \
+ @EVAS_LIBS@ \
+ @EINA_LIBS@
+-epdf_la_LDFLAGS = -module -avoid-version
++epdf_la_LDFLAGS = -module -avoid-version -no-undefined
+ epdf_la_LIBTOOLFLAGS = --tag=disable-static
