@@ -20,6 +20,7 @@ DEPEND="pkgconfig(ecore)
 	pkgconfig(edje)
 	pkgconfig(eet)
 	pkgconfig(eina)
+	pkgconfig(epdf)
 	pkgconfig(evas)"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/ethumb"
